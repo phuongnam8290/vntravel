@@ -32,6 +32,7 @@ body {
   padding-left: 160px;
 }
 
+
 @media screen and (max-width: 768px) {
   .navbar {
     height: 90px;
@@ -66,8 +67,19 @@ body {
   color: white !important;
 }
 
-.nav-item.active a {
+.nav-item.active > a {
   color: var(--secondary-color) !important;
+}
+
+.nav-item > .dropdown-menu > a:hover,
+.nav-item > .dropdown-menu > a:active {
+  background-color: transparent !important;
+  color: var(--secondary-color) !important;
+}
+
+.nav-item > .dropdown-menu > a.active {
+  color: var(--secondary-color) !important;
+  background-color: transparent !important;
 }
 
 header {
@@ -218,4 +230,35 @@ footer .logo img {
 footer .line {
   width: 100%;
   border-top: 1px solid white;
+}
+
+header.ha-long {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../images/ha-long/banner.png) fixed center/cover no-repeat;
+}
+
+header.hoi-an {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../images/hoi-an/banner.png) fixed center/cover no-repeat;
+}
+
+header.phu-quoc {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../images/phu-quoc/banner.png) fixed center/cover no-repeat;
+}
+
+section.under-construction {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  margin-bottom: -50px;
+}
+
+section.under-construction img {
+  width: 50%;
+} 
+
+@media screen and (max-width: 768px) {
+  section.under-construction img {
+    width: 100%;
+  } 
 }
