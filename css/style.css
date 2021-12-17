@@ -1,0 +1,159 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  --primary-color: #9f0a0e;
+  --primary-color-rgba: 159, 10, 14; 
+  --secondary-color: #ffcc01;
+  --text-color: #b2915b;
+}
+
+.navbar,
+.dropdown-menu {
+  background-color: transparent;
+  transition: background-color .5s ease-in-out;
+}
+
+.navbar {
+  height: 70px;
+}
+
+.navbar-brand {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-brand img {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  width: 120px;
+}
+
+.navbar-collapse {
+  padding-left: 160px;
+}
+
+.nav-item {
+  padding-right: 20px;
+}
+
+.nav-item a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-item.active a {
+  color: var(--secondary-color);
+}
+
+header {
+  height: 80vh;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../images/banner/banner.jpg) fixed center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-family: Corinthia, cursive;
+  font-size: 8rem;
+  color: white;
+  padding-bottom: 5rem;
+}
+
+header img {
+  animation-name: beating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  padding-right: 2rem;
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.common-title h1 {
+  font-family: 'Luxurious Script', cursive;
+  font-size: 5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.common-title .underline {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.common-title .underline img{
+  width: 10rem;
+  height: .5rem;
+}
+
+.introduction p {
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.location {
+  overflow: hidden;
+}
+
+.location-img {
+  backface-visibility: hidden;
+  transition: all .5s;
+}
+
+.location-img:hover {
+  transform: scale(1.05);
+}
+
+.fromLeft {
+  animation-name: fromLeft;
+  animation-duration: 3.5s;
+}
+
+.fromRight {
+  animation-name: fromRight;
+  animation-duration: 3.5s;
+}
+
+@keyframes fromLeft{
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight{
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
