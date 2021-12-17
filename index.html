@@ -24,9 +24,10 @@
 </head>
 <body>
   <!-- Navigation bar -->
-  <nav class="navbar navbar-expand-md fixed-top">
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top">
     <a href="#" class="navbar-brand">
-      <img src="images/logo.jpg" alt="Logo">
+      <img src="images/logo-sm.png" alt="Logo" class="d-block d-md-none logo-sm">
+      <img src="images/logo-lg.jpg" alt="Logo" class="d-none d-md-inline logo-lg">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu">
       <span class="navbar-toggler-icon"></span>
@@ -59,7 +60,7 @@
   <header>
     <h1 class="text-light">
       <img src="images/banner/flag.png" width="250" class="img-fluid banner-heading-heart"> 
-        vẻ đẹp bất tận
+      <span>vẻ đẹp bất tận</span>
     </h1>
   </header>
   <!-- End of header -->
@@ -143,6 +144,23 @@
     </div>
   </section>
   <!-- End of location -->
+
+  <!-- Footer -->
+  <footer class="container-fluid sticky-bottom">
+    <div class="align-items-center d-none d-sm-flex">
+      <div class="logo">
+        <img src="images/logo-sm.png">
+      </div>
+      <div class="line mx-4"></div>
+      <div class="copyright text-nowrap">
+        Copyright © 2012-2021 Vietnam Travel.
+      </div>     
+    </div>
+    <div class="d-block d-sm-none text-center">
+       © 2012-2021 Vietnam Travel
+    </div>
+  </footer>
+  <!-- End of footer -->
   
   <!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -164,12 +182,15 @@
 
         if (scrollPosition >= 450) {
           $("nav").css("background-color", "#9f0a0e");
+          $("nav .dropdown-menu").css("background-color", "#9f0a0e");
           $('.first-row').addClass('fromLeft');
           $('.second-row').addClass('fromRight');
         } else {
-          $("nav").css("background-color", "transparent"); 
+          $("nav").css("background-color", "rgba(0, 0, 0, 0.5)");
+          $("nav .dropdown-menu").css("background-color", "rgba(0, 0, 0, 0.5)");
           $('.first-row').removeClass('fromLeft');
-          $('.second-row').removeClass('fromRight');       }
+          $('.second-row').removeClass('fromRight');       
+        }
       })
     })
   </script>
