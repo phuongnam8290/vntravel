@@ -243,6 +243,10 @@ header.phu-quoc {
   background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../images/phu-quoc/banner.png) fixed center/cover no-repeat;
 }
 
+header.ninh-binh {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../images/ninh-binh/banner.png) fixed center/cover no-repeat;
+}
+
 section.under-construction {
   height: 100vh;
   display: flex;
